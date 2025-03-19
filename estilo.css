@@ -1,29 +1,71 @@
 body {
-    background-color: rgb(130, 130, 130);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     margin: 0;
+    background-image: url(fotos/fondo.webp);
+    background-size: cover;
+    font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 h1 {
     text-align: center;
-    background-color: white;
     border-radius: 20px;
-    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.767);
 }
 
 .contenedor {
+    position: relative; 
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    overflow: hidden; 
-    border: 10px solid black;
+    overflow: hidden;
+    border: 10px solid rgb(255, 255, 255);
+    margin: 0 auto; 
+    background-color: aliceblue;
 }
+
+.boton {
+    height: 300px;
+}
+
+.empezar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 2; 
+    transition: background-color 0.3s;
+}
+
+.empezado{
+    background-color: black;
+}
+
+.empezar:hover {
+    background-color: lightgray;
+}
+
 
 .boton {
     width: 100%;
@@ -34,25 +76,37 @@ h1 {
 }
 
 #verde {
-    background-color: greenyellow;
-    border-top-left-radius: 100%;
-}
-
-#rojo {
-    background-color: red;
+    background-color: rgb(164, 255, 137);
     border-top-right-radius: 100%;
 }
-
-#amarillo {
-    background-color: yellow;
-    border-bottom-left-radius: 100%;
+#verdefuerte {
+    background-color: rgb(92, 255, 42);
+    border-top-right-radius: 100%;
 }
-
-#azul {
-    background-color: blue;
+#rojo {
+    background-color: rgb(255, 118, 118);
+    border-top-left-radius: 100%;
+}
+#rojofuerte {
+    background-color: rgb(255, 0, 0);
+    border-top-left-radius: 100%;
+}
+#amarillo {
+    background-color: rgb(255, 255, 124);
     border-bottom-right-radius: 100%;
 }
-
+#amarillofuerte {
+    background-color: rgb(255, 255, 0);
+    border-bottom-right-radius: 100%;
+}
+#azul {
+    background-color: rgb(115, 215, 255);
+    border-bottom-left-radius: 100%;
+}
+#azulfuerte {
+    background-color: rgb(0, 183, 255);
+    border-bottom-left-radius: 100%;
+}
 .boton:active {
     transform: scale(0.95);
 }
@@ -60,5 +114,15 @@ h1 {
     .contenedor {
         width: 300px;
         height: 300px;
+        border: solid black 5px;
+        background-color: black;
+    }
+    .empezar{
+        width: 35%;
+        height: 35%;
+    }
+    body{
+        background: none;
+        background-color: black;
     }
 }

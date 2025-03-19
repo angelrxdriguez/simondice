@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const colores = ["verde", "rojo", "amarillo", "azul"];
+    const colores = ["rojo", "verde", "azul", "amarillo"];
     let secuencia = [];
     let jugador = [];
     let nivel = 0;
@@ -13,7 +13,7 @@ $(document).ready(function() {
         secuencia = [];
         jugador = [];
         nivel = 0;
-        $(".empezar").text("REINICIAR"); 
+        $(".empezar").addClass("empezado"); 
         siguienteTurno();
     }
 
@@ -40,8 +40,17 @@ $(document).ready(function() {
     }
 
     function iluminar(color) {
-        $("#" + color).fadeOut(100).fadeIn(100);
+        const $boton = $("#" + color);
+        const idOriginal = color;
+        const idFuerte = color + "fuerte";
+    
+        $boton.attr("id", idFuerte);
+    
+        setTimeout(() => {
+            $("#" + idFuerte).attr("id", idOriginal);
+        }, 300);
     }
+    
 
     $(".boton").click(function() {
         if (!puedeJugar) return;
@@ -58,7 +67,7 @@ $(document).ready(function() {
         }
 
         if (jugador.length === secuencia.length) {
-            setTimeout(() => siguienteTurno(), 1000);
+            setTimeout(() => siguienteTurno(), 500);
         }
     });
 });
