@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(130, 130, 130);
+}
+h1{
+text-align: center;
+background-color: white;
+border-radius: 20px;
+padding: 2%;
+}
+.contenedor{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+}
+.boton{
+    height: 300px;
+}
+#verde{
+background-color: greenyellow;
+border-top-left-radius: 100%;
+border: solid;
+cursor: pointer;
+}
+#rojo{
+background-color: red;
+border-top-right-radius: 100%;
+border: solid;
+cursor: pointer;
+}
+#amarillo{
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+    border: solid;
+    cursor: pointer;
+}
+#azul{
+background-color: blue;
+border-bottom-right-radius: 100%;
+border: solid;
+cursor: pointer;
+}
