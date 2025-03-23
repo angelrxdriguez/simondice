@@ -110,8 +110,8 @@ h1 {
 }
 @media (max-width: 768px) {
     .contenedor {
-        width: 550px;
-        height: 460px;
+        width: 350px;
+        height: 290px;
     }
     .empezar{
         width: 35%;
