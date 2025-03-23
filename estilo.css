@@ -161,6 +161,11 @@ h1 {
     transform: scale(0.95);
 }
 @media (max-width: 768px) {
+    .windows {
+        margin-right: 52px;
+        margin-top: 0;
+        font-size: 50px;
+        }
     .contenedor {
         width: 350px;
         height: 290px;
