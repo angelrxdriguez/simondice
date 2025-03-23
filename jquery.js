@@ -86,6 +86,6 @@ $(document).ready(function() {
         }
     });
     setTimeout(function() {
-   //  $("#pantallacarga").fadeOut(50);
+   $("#pantallacarga").fadeOut(50);
     }, 3000); 
 });
