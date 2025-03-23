@@ -1,0 +1,4 @@
+-alinear
+-pantalla de carga
+-sonidos
+-puntuaciones

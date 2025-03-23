@@ -36,7 +36,7 @@ $(document).ready(function() {
                 clearInterval(intervalo);
                 puedeJugar = true;
             }
-        }, 800);
+        }, 900);
     }
 
     function iluminar(color) {
@@ -48,7 +48,7 @@ $(document).ready(function() {
     
         setTimeout(() => {
             $("#" + idFuerte).attr("id", idOriginal);
-        }, 300);
+        }, 900);
     }
     
 
@@ -67,7 +67,7 @@ $(document).ready(function() {
         }
 
         if (jugador.length === secuencia.length) {
-            setTimeout(() => siguienteTurno(), 500);
+            setTimeout(() => siguienteTurno(), 900);
         }
     });
 });
