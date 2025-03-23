@@ -1,4 +1,9 @@
+document.addEventListener("click", function() {
+    var audio = document.getElementById("audio");
+    audio.play();
+}, { once: true }); 
 $(document).ready(function() {
+    
     const colores = ["rojo", "verde", "azul", "amarillo"];
     let secuencia = [];
     let jugador = [];
@@ -38,19 +43,29 @@ $(document).ready(function() {
             }
         }, 900);
     }
-
+/*
     function iluminar(color) {
-        const $boton = $("#" + color);
-        const idOriginal = color;
-        const idFuerte = color + "fuerte";
+        const boton = $("#" + color);
+        const original = color;
+        const fuerte = color + "fuerte";
     
-        $boton.attr("id", idFuerte);
+        boton.attr("id", fuerte);
     
         setTimeout(() => {
-            $("#" + idFuerte).attr("id", idOriginal);
+            $("#" + fuerte).attr("id", original);
         }, 900);
     }
+  */
+    function iluminar(color) {
+        const boton = $("#" + color);
+        
+        boton.addClass("iluminado");
     
+        setTimeout(() => {
+            boton.removeClass("iluminado");
+        }, 500);
+    }
+      
 
     $(".boton").click(function() {
         if (!puedeJugar) return;
@@ -61,7 +76,7 @@ $(document).ready(function() {
 
         const index = jugador.length - 1;
         if (jugador[index] !== secuencia[index]) {
-            alert("¡Game Over! hiciste:" + nivel);
+            alert("PERDISTE :" + nivel);
             $(".empezar").text("EMPEZAR"); 
             return;
         }
@@ -70,4 +85,7 @@ $(document).ready(function() {
             setTimeout(() => siguienteTurno(), 900);
         }
     });
+    setTimeout(function() {
+     $("#pantallacarga").fadeOut(50);
+    }, 3000); 
 });

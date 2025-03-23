@@ -6,19 +6,30 @@
     <title>Simon Dice</title>
     <link rel="stylesheet" href="estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"></head>
 <body>
-    <div class="encabezado">
-        <h1>WINDOWS MON</h1>
+<audio id="audio" src="sound/Microsoft Windows XP sonido de inicio.mp3" preload="auto" autoplay></audio>
+
+    <div id="pantallacarga">
+        <div class="contenedorlogo">
+            <h5 class="prelogo">Microsoft</h5>
+            <img src="img/vista.png" alt="Logo" class="logo">
+        </div>
+        <div class="sistema">
+            <h2 class="windows">Windows <sup>xp</sup></h2>
+        </div>
     </div>
+    
+    
     <div class="contenedor">
         <div class="empezar"></div>
         <div class="boton rojo" id="rojo"></div>
         <div class="boton verde" id="verde"></div>
         <div class="boton azul" id="azul"></div>        
         <div class="boton amarillo" id="amarillo"></div>
+    </div>
+    <div class="puntuacion">
 
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

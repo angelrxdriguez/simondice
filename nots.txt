@@ -1,4 +1,4 @@
 -alinear
--pantalla de carga
+-pantalla de carga okj
 -sonidos
 -puntuaciones
