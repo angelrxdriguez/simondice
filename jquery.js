@@ -85,7 +85,7 @@ $(document).ready(function() {
             setTimeout(() => siguienteTurno(), 900);
         }
     });
-    setTimeout(function() {
-   $("#pantallacarga").fadeOut(50);
-    }, 30); 
+    $(".iniciar").on("click", function() {
+        $("#pantallacarga").fadeOut(500);
+    });
 });
