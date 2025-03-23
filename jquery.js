@@ -87,5 +87,5 @@ $(document).ready(function() {
     });
     setTimeout(function() {
    $("#pantallacarga").fadeOut(50);
-    }, 3000); 
+    }, 30); 
 });
