@@ -162,6 +162,8 @@ h1 {
 }
 @media (max-width: 768px) {
     .windows {
+        margin-right: 0px;
+        text-align: center;
         margin-top: 0;
         font-size: 50px;
         }
