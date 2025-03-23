@@ -1,6 +1,6 @@
 document.addEventListener("click", function() {
     var audio = document.getElementById("audio");
-    audio.play();
+audio.play();
 }, { once: true }); 
 $(document).ready(function() {
     
@@ -87,5 +87,5 @@ $(document).ready(function() {
     });
     setTimeout(function() {
    $("#pantallacarga").fadeOut(50);
-    }, 3000); 
+    }, 30); 
 });
