@@ -1,10 +1,13 @@
 document.addEventListener("click", function() {
-    var audio = document.getElementById("audio");
-audio.play();
+ 
 
 }, { once: true }); 
 $(document).ready(function() {
-    
+    $(".iniciar").click(function() {
+        $("#pantallacarga").fadeOut(200);
+        var audio = document.getElementById("audio");
+        audio.play();
+    });
     const colores = ["rojo", "verde", "azul", "amarillo"];
     let secuencia = [];
     let jugador = [];
@@ -65,9 +68,7 @@ $(document).ready(function() {
         }, 500);
     }
       
-    $(".iniciar").click(function() {
-        $("#pantallacarga").fadeOut(200);
-    });
+ 
     let puntuacion = 0; 
 
     $(".boton").click(function() {
