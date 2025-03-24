@@ -226,10 +226,12 @@ border-top:solid 2px rgb(67, 114, 255) ;
         font-family: "VT323", monospace !important;
         font-weight: 400;
         font-style: normal;      
+    font-size: 150%;
+
 }
 .cabeza{
     background-color: rgb(172, 172, 172);
-    width: 100px;
+    width: 200%;
     text-align: center;
     padding: 1%;
     margin-top: 15%;
@@ -273,6 +275,7 @@ body{
         width: 300px;
     }
     .perdido{
-        margin-left: 5%;
+        margin-left: 3%;
+        font-size: 110%;
     }
 }
