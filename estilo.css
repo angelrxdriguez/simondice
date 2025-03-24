@@ -272,4 +272,7 @@ body{
     .puntuacion{
         width: 300px;
     }
+    .perdido{
+        margin-left: 5%;
+    }
 }

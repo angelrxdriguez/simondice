@@ -1,6 +1,7 @@
 document.addEventListener("click", function() {
     var audio = document.getElementById("audio");
 audio.play();
+
 }, { once: true }); 
 $(document).ready(function() {
     
@@ -9,7 +10,6 @@ $(document).ready(function() {
     let jugador = [];
     let nivel = 0;
     let puedeJugar = false;
-
     $(".empezar").click(function() {
         iniciarJuego();
     });
@@ -58,7 +58,6 @@ $(document).ready(function() {
   */
     function iluminar(color) {
         const boton = $("#" + color);
-        
         boton.addClass("iluminado");
     
         setTimeout(() => {
@@ -73,15 +72,15 @@ $(document).ready(function() {
 
     $(".boton").click(function() {
         if (!puedeJugar) return;
-    
+
         const colorSeleccionado = $(this).attr("id");
         jugador.push(colorSeleccionado);
         iluminar(colorSeleccionado);
     
         const index = jugador.length - 1;
         if (jugador[index] !== secuencia[index]) {
-            var audio = document.getElementById("perdido");
-        audio.play();
+            var audio3 = document.getElementById("perdido");
+        audio3.play();
             localStorage.setItem("puntuacionFinal", puntuacion);  
             setTimeout(() => {
                 window.location.href = "perder.html"; 
