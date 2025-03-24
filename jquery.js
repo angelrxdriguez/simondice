@@ -66,26 +66,34 @@ $(document).ready(function() {
         }, 500);
     }
       
+    $(".iniciar").click(function() {
+        $("#pantallacarga").fadeOut(200);
+    });
+    let puntuacion = 0; 
 
     $(".boton").click(function() {
         if (!puedeJugar) return;
-
+    
         const colorSeleccionado = $(this).attr("id");
         jugador.push(colorSeleccionado);
         iluminar(colorSeleccionado);
-
+    
         const index = jugador.length - 1;
         if (jugador[index] !== secuencia[index]) {
-            alert("PERDISTE :" + nivel);
-            $(".empezar").text("EMPEZAR"); 
+            var audio = document.getElementById("perdido");
+        audio.play();
+            localStorage.setItem("puntuacionFinal", puntuacion);  
+            setTimeout(() => {
+                window.location.href = "perder.html"; 
+            }, 1000);
             return;
         }
-
+        
+    
         if (jugador.length === secuencia.length) {
+            puntuacion += 1;
+            $(".puntos").text(puntuacion); 
             setTimeout(() => siguienteTurno(), 900);
         }
-    });
-    $(".iniciar").on("click", function() {
-        $("#pantallacarga").fadeOut(500);
     });
 });
